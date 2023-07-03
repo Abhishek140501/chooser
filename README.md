@@ -1,3 +1,5 @@
+# Creative Commons License Chooser
+
 ![GitHub contributors](https://img.shields.io/github/contributors/creativecommons/chooser)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/creativecommons)
 ![GitHub](https://img.shields.io/github/license/creativecommons/chooser)
@@ -8,7 +10,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/creativecommons/chooser?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/creativecommons/chooser?style=social)
 
-# Chooser
+## Chooser
 
 The Creative Commons License Chooser is meant to help people learn about CC licenses, and select the license that best fits their needs. The new version in this repo places greater importance on usability, and an educational experience of the six CC licenses.
 
@@ -25,9 +27,11 @@ Tasks, issues, and discussion related to the release of the new chooser are trac
 ## Getting Started
 
 ### Prerequisite
+
 [nodeJS](https://nodejs.org/en/blog/release/v14.17.3) version 14 or below, as the version above 14 may give error.
 
 ### Commands
+
 Run the following commands in order to have the code up and running on your machine:
 
 ``` bash
@@ -50,12 +54,15 @@ To be able to use the file it should either be rendered statically from the inte
 
 Note: the Chooser component depends on Vue 2.x, as can be seen in the following example.
 
-```
-<script src="https://cdn.jsdelivr.net/npm/vue@2.x.x"></script>
-<script src="https://unpkg.com/@creativecommons/chooser/dist/license-chooser.js"></script>
+'''bash
+&lt;script src="<https://cdn.jsdelivr.net/npm/vue@2.x.x">&lt;/script>
 
-<license-chooser></license-chooser>
-```
+&lt;script src="<https://unpkg.com/@creativecommons/chooser/dist/license-chooser.js">&lt;/script>
+
+&lt;license-chooser&gt;
+</license-chooser>
+
+```bash
 
 If the web component is intended to be built without header and footer, run `VUE_APP_CC_OUTPUT=embedded npm run build-component`
 
@@ -78,8 +85,8 @@ You can run tests by executing:
 ```bash
 npm run test
 ```
-For running tests on a web-component build, run `npm run test-component`. It starts a server with the  `dist/demo.html` on which tests can be run.
 
+For running tests on a web-component build, run `npm run test-component`. It starts a server with the  `dist/demo.html` on which tests can be run.
 
 ## CSS Build
 
@@ -95,6 +102,18 @@ To update the dist bundle, run ```$ npm run build```. This will also automatical
 
 The site can be built in two different modes: `embedded` and `standalone`. `Embedded` mode removes the header and footer from the application, resulting in the following appearance:
 
-<img src="static/embedded-screenshot.png" alt="Application built in embedded mode">
+## python
+
+[def]: path/to/image.png "Application built in embedded mode"
+![Application built in embedded mode][def]
+![Application built in embedded mode](data:image/png;base64,iVBORw0KG...actual base64-encoded image data...)
+
+```****
 
 To build into embedded mode, set the environment variable `VUE_APP_CC_OUTPUT=embedded` on your server before building. If `VUE_APP_CC_OUTPUT` is unset or set to a different value, the app will build in the default `standalone` mode, with its own header and footer.
+
+
+[def]: tatic/embedded-screenshot.pn
+
+
+[def]: data:image/png;base64,iVBORw0KG... (data URI)
