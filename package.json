@@ -27,10 +27,13 @@
     "test-component": "vue-cli-service test:unit --coverage && cd dist && live-server --port=8080 --entry-file=./demo.html & npm run test:cypress",
     "test:unit": "vue-cli-service test:unit",
     "build-component": "rm -rf dist && VUE_APP_CC_OUTPUT=embedded vue-cli-service build --target wc --name license-chooser src/main.js",
+    "build-component:unix": "npm run build-component",
+    "build-component:windows": "npm run build-component",
     "test:cypress": "node_modules/.bin/cypress open",
     "lint": "vue-cli-service lint src/**/*.{vue,js} --fix && npx stylelint ./src/**/*.{vue,css} --fix",
     "i18n:report": "vue-cli-service i18n:report -v --src src/**/*.vue --locales src/locales/**.json -o output.json"
   },
+  
   "dependencies": {
     "@creativecommons/cc-assets": "^0.1.0",
     "@creativecommons/vocabulary-components": "^0.2.0",
